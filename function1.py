@@ -6,17 +6,12 @@ def UsoSigma(Num1,Num2):
         CanDiv3.append(i)
     return CanDiv3
 
-def SkibidiDemonkingSoRizzerSoSigma(Num):
-    sum1 = 0
-    sum2 = 0
-    while True:
-        Num = int(input("ใส่ตัวเลข : "))
-        if Num > 0:
-            sum1+=Num
-            print(sum1)
-        elif Num < 0:
-            sum2+=Num
-            print(sum2)
-        elif Num == 0:
-            print(f"ผลรวมของตัวเลขบวกและตัวเลขลบ คือ : {sum1 + sum2}")
-            break
+def calculate(num, sum1, sum2):
+    if num > 0:
+        sum1 += num
+        print(f'ผลบวกจากบวก = {sum1}')
+        return sum1, sum2
+    elif num < 0:
+        sum2 += num
+        print(f'ผลบวกจากลบ = {sum2}')
+        return sum1, sum2
